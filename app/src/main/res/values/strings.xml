@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">save</string>
+    <string-array name="spinner">
+        <item>a</item>
+        <item>b</item>
+    </string-array>
+    <string name="textViewa">сюда</string>
+</resources>
