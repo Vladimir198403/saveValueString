@@ -15,6 +15,8 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
+    Spinner spinner;
+
     private static final String LENG = "LENG";
     String mes;
     TextView textView1;
@@ -24,10 +26,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
-    public void send(View view) {// метод передачи значения спинера в вью
-        Spinner spinner = (Spinner)findViewById(R.id.spinner);//определил спинер
+        spinner = (Spinner)findViewById(R.id.spinner);//определил спинер
         textView1 = (TextView)findViewById(R.id.textViewa);// определил вью, в которую положу значение спинера
+    }
+
+
+    public void send(View view) {// метод передачи значения спинера в вью
         mes = String.valueOf(spinner.getSelectedItem());//определил переменную и положил в нее значение, которое было выбрано на спинере
         textView1.setText(mes);//передал это значение во вью
         Log.d("My tag", mes);
